@@ -1,30 +1,35 @@
-// My Character Variables
-
-let lowercase = "abcdefghijklmnopqrstuvwxyz".split(" ");
-let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ");
-let specialchar = ")(*&^%$#@!~-_".split(" ");
-let numschar = "0123456789".split(" ");
-
+// My Array Variables
+let lowercaseArray = "abcdefghijklmnopqrstuvwxyz".split("");
+let uppercaseArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+let specialcharArray = ")(*&^%$#@!~-_".split("");
+let numberArray = "0123456789".split("");
 
 // My Functions
 
 function passoptions() {
-  let passwordLength = prompt("What length would you like your pasword (numberic value only)")
+  let passwordLength = prompt(
+    "What length would you like your pasword to be (numberic value only)"
+  );
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    alert("You must select a length between 8 and 128. Sorry, try again!")
-    return
+    alert("You must select a length between 8 and 128. Sorry, try again!");
+    return;
   }
 
   // Confirmation of variable options
-  
+
   let wantsLower = confirm("Do you want to include lower case letters?");
   let wantsUpper = confirm("Do you want include upper case letters");
   let wantsSpecial = confirm("Do you want to include special characters?");
-  let wantsNumber = confirm("Do you want to include numbers?")
+  let wantsNumber = confirm("Do you want to include numbers?");
 
-  if (wantsLower === false $$ wantsUpper === false && wantsSpecial === false && wantsNumber === false) {
-  alert("Please choose a minimum of one option.")
-  return    
+  if (
+    wantsLower === false &&
+    wantsUpper === false &&
+    wantsSpecial === false &&
+    wantsNumber === false
+  ) {
+    alert("Please choose a minimum of one option.");
+    return;
   }
 
   let criteria = {
@@ -36,15 +41,9 @@ function passoptions() {
   }
   return criteria
 
-}
+Math.floor(Math.random()*lowercaseArray.passwordLength)
 
-function getRandom(xxx) {
-  let getRandom
-
-}
-
-
-
+[...lowercaseArray.split(""), ...uppercaseArray.split(""), ...specialcharArray.split(""), ...numberArray.split("")];
 
 
 // Assignment Code
